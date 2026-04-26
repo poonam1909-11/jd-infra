@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dholera Section</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #000000, #121212);
+    color: #fff;
+}
+
+/* MAIN SECTION */
+.section {
+    width: 90%;
+    margin: 40px auto;
+}
+
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, gold, rgb(244, 241, 241));
+    color: black;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Glow Hover */
+.nav-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(198, 147, 35, 0.6);
+}
+
+/* Shine Effect */
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgb(255, 255, 255), transparent);
+    transition: 0.5s;
+}
+
+.nav-links a:hover::before {
+    left: 100%;
+}
+
+
+/* GOLD BACKGROUND BOX */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #b8962e, #ffd700, #b8962e);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* CARD */
+.stat-box {
+    background: #0a0a0a;
+    color: #ffd700;
+    width: 23%;
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 12px;
+    border: 1px solid #ffd70050;
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 15px #ffd700;
+}
+
+/* ICON */
+.stat-box i {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+/* TEXT */
+.stat-box h2 {
+    margin: 10px 0;
+    font-size: 26px;
+}
+
+.stat-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* INVESTORS SECTION */
+.investors {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #b8962e, #ffd700, #b8962e);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.investors h2 {
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* LOGO BOX */
+.logo-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* LOGO IMAGE */
+.logo-box img {
+    height: 60px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.logo-box img:hover {
+    transform: scale(1.1);
+} 
+
+.logo-slider {
+    overflow: hidden;
+    background: #f8ec67;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.slider-track {
+    display: flex;
+    width: calc(250px * 8);
+    animation: scroll 20s linear infinite;
+}
+
+.slider-track img {
+    width: 200px;
+    height: 60px;
+    margin: 0 25px;
+    object-fit: contain;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.dholera {
+    background: gold and black;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.dholera h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:gold;
+}
+
+.dholera p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.dholera ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dholera ul li {
+    background: rgb(34, 32, 32);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid gold;
+}
+
+
+/* WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+</style> 
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo-text">JD Infra</div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="feedback.html">feedback</a>
+
+    </div>
+</div>
+
+
+<!-- ICON LIBRARY -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="section">
+
+    <!-- STATS -->
+    <div class="stats">
+
+        <div class="stat-box">
+            <i class="fas fa-handshake"></i>
+            <h2>buy farms</h2>
+            <p>Happy Customers</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <h2>best farms</h2>
+            <p>Bigha Land</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fas fa-calendar"></i>
+            <h2>12+</h2>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat-box">
+            <i class="fas fa-car"></i>
+            <h2>BEST TRANSPORT</h2>
+            <p>From Ahmedabad</p>
+        </div>
+
+    </div>
+
+    <!-- INVESTORS -->
+    <div class="investors">
+        <h2>Major Investors Driving Dholera's Development</h2>
+
+        <div class="logo-box">
+            <img src="11.png" alt="Adani">
+            <img src="22.png" alt="Tata">
+            <img src="33.png" alt="ReNew Power">
+            <img  src="44.png" alt="hp"
+        </div>
+    </div>
+
+</div>
+
+<section class="dholera">
+    <h2>Dholera Smart City (SIR)</h2>
+
+    <p>
+        <strong>Dholera Special Investment Region (SIR)</strong> in Gujarat is India's first greenfield smart city and a premier industrial node under the Delhi-Mumbai Industrial Corridor (DMIC). It is rapidly developing into a global high-tech manufacturing hub, featuring world-class infrastructure like an international airport, expressway connectivity, and India’s first semiconductor fabrication unit.
+    </p>
+
+    <ul>
+        <li><strong>Location & Scope:</strong> Situated near Ahmedabad, Gujarat, Dholera is a large-scale planned industrial smart city.</li>
+        
+        <li><strong>Infrastructure:</strong> Offers plug-and-play infrastructure, underground utilities, smart systems, and sustainable development.</li>
+        
+        <li><strong>Semiconductor Hub:</strong> Home to India’s first semiconductor fabrication plant led by Tata Semiconductor Manufacturing Pvt. Ltd.</li>
+        
+        <li><strong>Connectivity:</strong> Connected via expressway, upcoming metro rail, and international airport.</li>
+        
+        <li><strong>Economic Growth:</strong> Designed to boost industrial development, jobs, and foreign investment.</li>
+        
+        <li><strong>City Planning:</strong> Includes residential, commercial, industrial zones and green spaces.</li>
+    </ul>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/918460190909?text=Hello%20JD%20Infra,%20I%20am%20interested%20in%20Dholera%20plots" 
+    class="whatsapp-btn" target="_blank">💬</a>
+
+
+
+</body>
+</html>

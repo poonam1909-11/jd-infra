@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dholera Plot Price Comparison</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #cabe8b, #eab308);
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, gold, rgb(232, 229, 229));
+    color: black;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Glow Hover */
+.nav-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(224, 164, 34, 0.6);
+}
+
+/* Shine Effect */
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgb(255, 255, 255), transparent);
+    transition: 0.5s;
+}
+
+.nav-links a:hover::before {
+    left: 100%;
+}
+
+
+/* SECTION */
+.section {
+    padding: 30px;
+}
+
+h2 {
+    color: #facc15;
+}
+
+/* CARDS */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #1e293b;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* COLORS */
+.cheap { border-left: 5px solid #22c55e; }
+.mid { border-left: 5px solid #facc15; }
+.premium { border-left: 5px solid #ef4444; }
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #334155;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #facc15;
+    color: black;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #020617;
+    color: #94a3b8;
+}
+
+
+/* WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo-text">JD Infra</div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="feedback.html">feedback</a>
+
+    </div>
+</div>
+
+<header>
+🏡 Dholera Smart City Plot Price Comparison
+</header>
+
+<div class="section">
+<h2>💰 Price Categories</h2>
+
+<div class="container">
+
+<div class="card cheap">
+<h3>🟢 Cheap farms</h3>
+<p><b>Price:</b> ₹600 – ₹5,000 / sq yd</p>
+<p><b>Total:</b> ₹3 – ₹8 lakh</p>
+<p><b>Location:</b> Outside SIR / far areas</p>
+<ul>
+<li>Low investment</li>
+<li>High risk</li>
+<li>Slow growth</li>
+</ul>
+</div>
+
+<div class="card mid">
+<h3>🟡 Mid-Range farms</h3>
+<p><b>Price:</b> ₹6,000 – ₹9,000 / sq yd</p>
+<p><b>Total:</b> ₹8 – ₹15 lakh</p>
+<p><b>Location:</b> Developing zones</p>
+<ul>
+<li>Balanced investment</li>
+<li>Moderate growth</li>
+<li>Safer than cheap</li>
+</ul>
+</div>
+
+<div class="card premium">
+<h3>🔴 Premium farms</h3>
+<p><b>Price:</b> ₹10,000 – ₹18,000+ / sq yd</p>
+<p><b>Total:</b> ₹15 – ₹30 lakh+</p>
+<p><b>Location:</b> Near Airport / Expressway</p>
+<ul>
+<li>High demand</li>
+<li>Fast ROI</li>
+<li>Low risk</li>
+</ul>
+</div>
+
+</div>
+</div>
+<div class="section">
+<h2>📍 Dholera Smart City Location</h2>
+
+<div style="width:100%; height:400px; border-radius:12px; overflow:hidden;">
+<iframe 
+    src="https://maps.google.com/maps?q=Dholera%20Smart%20City&t=&z=11&ie=UTF8&iwloc=&output=embed"
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+</iframe>
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top:20px;">
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Dholera+Smart+City+Gujarat"
+        target="_blank"
+        class="direction-btn">
+        Get Directions to Dholera
+    </a>
+</div> 
+
+
+
+<div class="section">
+<h2>⚖️ Comparison Table</h2>
+
+<table>
+<tr>
+<th>Factor</th>
+<th>Cheap</th>
+<th>Mid</th>
+<th>Premium</th>
+</tr>
+
+<tr>
+<td>Price</td>
+<td>Low</td>
+<td>Medium</td>
+<td>High</td>
+</tr>
+
+<tr>
+<td>Location</td>
+<td>Far</td>
+<td>Developing</td>
+<td>Prime</td>
+</tr>
+
+<tr>
+<td>Infrastructure</td>
+<td>❌ No</td>
+<td>⚠️ Partial</td>
+<td>✅ Full</td>
+</tr>
+
+<tr>
+<td>Risk</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+
+<tr>
+<td>ROI Speed</td>
+<td>Slow</td>
+<td>Moderate</td>
+<td>Fast</td>
+</tr>
+
+<tr>
+<td>Resale</td>
+<td>Hard</td>
+<td>Normal</td>
+<td>Easy</td>
+</tr>
+
+</table>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/918460190909?text=Hello%20JD%20Infra,%20I%20am%20interested%20in%20Dholera%20plots" 
+    class="whatsapp-btn" target="_blank">💬</a>
+
+
+<footer>
+© 2026 Dholera Property Guide | Designed by You 🚀
+</footer>
+
+</body>
+</html>
