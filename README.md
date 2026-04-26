@@ -1,1 +1,242 @@
-# jd-infra
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DHOLERA FARMS DEALING</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    animation: fadeIn 1.2s ease-in;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    transform: rotate(90deg);
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, gold, black);
+    color: black;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Glow Hover */
+.nav-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(198, 147, 35, 0.6);
+}
+
+/* Shine Effect */
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgb(255, 255, 255), transparent);
+    transition: 0.5s;
+}
+
+.nav-links a:hover::before {
+    left: 100%;
+}
+
+/* Title */
+.title {
+    margin: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    animation: slideDown 1s ease;
+}
+
+/* Slide animation */
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* LOGO CENTER */
+img {
+    display: block;
+    margin: 50px auto;
+    max-width: 800px;
+}
+/* Logo Section */
+.logo img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+/* Logo Animation */
+.logo img {
+    width: 600px;
+    animation: float 4s ease-in-out infinite, zoomIn 2s ease;
+}
+
+/* Floating Effect */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Zoom In */
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.box {
+    margin-top: 100px;
+}
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+}
+button {
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    cursor: pointer;
+}
+
+.opt{
+            background: black;
+            color: gold;
+            text-align: center;
+            font-family: Arial;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background: gold;
+            color: black;
+            cursor: pointer;
+        }
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo-text">JD Infra</div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="feedback.html">feedback</a>
+
+    </div>
+</div>
+
+<!--LOGO -->
+<div class="logo">
+    <img src="kalu.png" alt="JD Infra Logo">
+</div>
+
+<!--otp-->
+<h2>Mobile OTP Verification</h2>
+
+<input type="text" id="phone" placeholder="Enter Mobile Number">
+<br>
+<button onclick="sendOTP()">Send OTP</button>
+
+<br><br>
+
+<input type="text" id="otp" placeholder="Enter OTP">
+<br>
+<button onclick="verifyOTP()">Verify OTP</button>
+
+<script>
+async function sendOTP() {
+    let phone = document.getElementById("phone").value;
+
+    await fetch("http://localhost:3000/send-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone })
+    });
+
+    alert("OTP Sent!");
+}
+
+async function verifyOTP() {
+    let phone = document.getElementById("phone").value;
+    let otp = document.getElementById("otp").value;
+
+    let res = await fetch("http://localhost:3000/verify-otp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone, otp })
+    });
+
+    let data = await res.json();
+
+    if (data.success) {
+        alert("Login Success ✅");
+    } else {
+        alert("Invalid OTP ❌");
+    }
+}
+</script>
+
+
+</body>
+</html>
