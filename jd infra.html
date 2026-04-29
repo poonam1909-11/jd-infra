@@ -133,21 +133,6 @@ img {
     }
 }
 
-.box {
-    margin-top: 100px;
-}
-input {
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
-}
-button {
-    padding: 10px 20px;
-    background: gold;
-    border: none;
-    cursor: pointer;
-}
-
 </style>
 
 </head>
@@ -170,54 +155,8 @@ button {
 
 <!--LOGO -->
 <div class="logo">
-    <img src="kalu.png" alt="JD Infra Logo">
+    <img src="55.png" alt="JD Infra Logo">
 </div>
-
-<!--box-->
-<h2>Mobile OTP Verification</h2>
-
-<input type="text" id="phone" placeholder="Enter Mobile Number">
-<br>
-<button onclick="sendOTP()">Send OTP</button>
-
-<br><br>
-
-<input type="text" id="otp" placeholder="Enter OTP">
-<br>
-<button onclick="verifyOTP()">Verify OTP</button>
-
-<script>
-async function sendOTP() {
-    let phone = document.getElementById("phone").value;
-
-    await fetch("http://localhost:3000/send-otp", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone })
-    });
-
-    alert("OTP Sent!");
-}
-
-async function verifyOTP() {
-    let phone = document.getElementById("phone").value;
-    let otp = document.getElementById("otp").value;
-
-    let res = await fetch("http://localhost:3000/verify-otp", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone, otp })
-    });
-
-    let data = await res.json();
-
-    if (data.success) {
-        alert("Login Success ✅");
-    } else {
-        alert("Invalid OTP ❌");
-    }
-}
-</script>
 
 
 </body>
