@@ -182,7 +182,6 @@ function toggleMenu() {
 </script>
 
     <div class="nav-links">
-        </li><a href="index.html">index</a></li>
         </li><a href="home.html">Home</a></li>
         </li><a href="services.html">Services</a></li>
         </i><a href="gallery.html">Gallery</a></li>
