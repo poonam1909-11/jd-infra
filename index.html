@@ -133,13 +133,48 @@ img {
     }
 }
 
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 25px;
+  color: gold;
+  cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: black;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 </style>
 
 </head>
 
 <body>
 
+<!-- Hamburger -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
+  <!-- Menu -->
+  <ul class="nav-links" id="menu">
+    
 <!-- NAVBAR -->
 <div class="navbar">
     <div class="logo-text">JD Infra</div>
