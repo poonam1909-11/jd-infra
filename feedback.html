@@ -3,9 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> services</title>
+<title>Feedback</title>
 
 <style>
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #000;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid #d4af37;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d4af37;
+}
 
     /* Nav Links */
 .nav-links {
@@ -73,6 +95,8 @@
     background: transparent;
     color: #fff;
     border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .feedback input::placeholder,
@@ -88,10 +112,12 @@
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .feedback button:hover {
     background: gold;
+    transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -100,6 +126,7 @@
     padding: 20px;
     background: #111;
     border-top: 2px solid #d4af37;
+    color: #d4af37;
 }
 
 /* WhatsApp */
@@ -112,8 +139,8 @@
     padding: 15px;
     border-radius: 50%;
     text-decoration: none;
+    font-size: 24px;
 }
-
 
 </style>
 </head>
@@ -135,23 +162,37 @@
     <h2>Feedback Form</h2>
 
     <form>
-        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Your Name" name="name" required>
         
-        <input type="email" placeholder="Your Email" required>
+        <input type="email" placeholder="Your Email" name="email" required>
         
-        <textarea placeholder="Your Feedback" rows="5" required></textarea>
+        <textarea placeholder="Your Feedback" name="feedback" rows="5" required></textarea>
         
-        <button type="submit">Submit Feedback</button>
+        <button type="submit" onclick="handleFeedback(event)">Submit Feedback</button>
     </form>
 </section>
 
-<footer>
+<footer class="footer">
 © 2026 Dholera Property Guide | Designed by You 🚀
 </footer>
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/918460190909?text=Hello%20JD%20Infra,%20I%20am%20interested%20in%20Dholera%20plots" 
     class="whatsapp-btn" target="_blank">💬</a>
+
+<script>
+function handleFeedback(event) {
+    event.preventDefault();
+    const name = document.querySelector('input[name="name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const feedback = document.querySelector('textarea[name="feedback"]').value;
+    
+    // Send to WhatsApp
+    const message = `Name: ${name}\nEmail: ${email}\nFeedback: ${feedback}`;
+    const encodedMessage = encodeURIComponent(message);
+    window.location.href = `https://wa.me/918460190909?text=${encodedMessage}`;
+}
+</script>
 
 </body>
 </html>
