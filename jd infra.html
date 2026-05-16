@@ -1,163 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DHOLERA FARMS DEALING</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JD Infra - Professional Infrastructure Solutions">
+    <title>JD Infra - Home</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #ffffff, #ffffff);
-    animation: fadeIn 1.2s ease-in;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Fade In */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+            animation: fadeIn 1.2s ease-in;
+            color: #333;
+        }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-}
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-/* Menu Icon */
-.menu-icon {
-    font-size: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        @keyframes slideDown {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
 
-.menu-icon:hover {
-    transform: rotate(90deg);
-}
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
 
-/* Nav Links */
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.nav-links a {
-    text-decoration: none;
-    padding: 10px 22px;
-    border-radius: 25px;
-    background: linear-gradient(145deg, gold, black);
-    color: black;
-    font-weight: bold;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s;
-}
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 1px;
+        }
 
-/* Glow Hover */
-.nav-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(198, 147, 35, 0.6);
-}
+        /* Menu Icon */
+        .menu-icon {
+            font-size: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: none;
+        }
 
-/* Shine Effect */
-.nav-links a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgb(255, 255, 255), transparent);
-    transition: 0.5s;
-}
+        .menu-icon:hover {
+            transform: rotate(90deg);
+        }
 
-.nav-links a:hover::before {
-    left: 100%;
-}
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-/* Title */
-.title {
-    margin: 30px;
-    font-size: 28px;
-    font-weight: bold;
-    animation: slideDown 1s ease;
-}
+        .nav-links a {
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 25px;
+            background: linear-gradient(145deg, #d4af37, #2d2d2d);
+            color: white;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
 
-/* Slide animation */
-@keyframes slideDown {
-    from { transform: translateY(-30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
+        .nav-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
+            border-color: #d4af37;
+        }
 
-/* LOGO CENTER */
-img {
-    display: block;
-    margin: 50px auto;
-    max-width: 800px;
-}
-/* Logo Section */
-.logo img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-}
+        /* Shine Effect */
+        .nav-links a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
 
-/* Logo Animation */
-.logo img {
-    width: 600px;
-    animation: float 4s ease-in-out infinite, zoomIn 2s ease;
-}
+        .nav-links a:hover::before {
+            left: 100%;
+        }
 
-/* Floating Effect */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
-}
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-/* Zoom In */
-@keyframes zoomIn {
-    from {
-        transform: scale(1);
-        opacity: 1;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
+        /* Title */
+        .title {
+            margin: 30px 0;
+            font-size: 32px;
+            font-weight: bold;
+            animation: slideDown 1s ease;
+            text-align: center;
+            color: #333;
+        }
 
+        /* Logo Section */
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            min-height: 60vh;
+        }
 
-</style>
+        .logo img {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            animation: float 4s ease-in-out infinite;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                width: 100%;
+            }
+
+            .nav-links a {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .logo img {
+                max-width: 100%;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 10px 15px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .title {
+                font-size: 20px;
+                margin: 20px 0;
+            }
+
+            .logo {
+                min-height: 40vh;
+                padding: 30px 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo-text">JD Infra</div>
+        <div class="menu-icon">☰</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+    </nav>
 
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <h1 class="title">Welcome to JD Infra</h1>
 
-<!-- NAVBAR -->
-<div class="navbar">
-    <div class="logo-text">JD Infra</div>
-
-    <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="feedback.html">Feedback</a>
+        <!-- LOGO SECTION -->
+        <div class="logo">
+            <img src="55.png" alt="JD Infra Logo - Professional Infrastructure Solutions">
+        </div>
     </div>
-</div>
 
-<!--LOGO -->
-<div class="logo">
-    <img src="55.png" alt="JD Infra Logo">
-</div>
+    <script>
+        // Simple mobile menu toggle
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
 
+        menuIcon.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
 
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    navLinks.style.display = 'none';
+                }
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navLinks.style.display = 'flex';
+            }
+        });
+    </script>
 </body>
 </html>
