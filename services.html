@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> services</title>
+<title>Services</title>
 
 <style>
 
@@ -13,6 +13,22 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: #000;
     color: #f5d27a;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid #d4af37;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d4af37;
 }
 
 /* Nav Links */
@@ -83,6 +99,8 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -137,12 +155,17 @@ body {
     padding: 15px;
     border-radius: 50%;
     text-decoration: none;
+    font-size: 24px;
 }
 
 </style>
 </head>
 
 <body>
+
+    <!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo-text">JD Infra</div>
 
     <div class="nav-links">
         <a href="home.html">Home</a>
@@ -156,7 +179,7 @@ body {
 <div class="hero">
     <h1>Dholera Smart City</h1>
     <p>Premium Investment Opportunity</p>
-    <a href="get start" class="btn">Get Started</a>
+    <a href="home.html" class="btn">Get Started</a>
 </div>
 
 <!-- PROJECTS -->
@@ -188,3 +211,5 @@ body {
 
 </body>
 </html>
+
+
